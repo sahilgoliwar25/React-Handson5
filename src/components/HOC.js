@@ -1,6 +1,7 @@
 import React from "react";
-
-const HOC = () => {
+import CountHoc from "./CountHoc";
+const HOC = (props) => {
+  console.log(props);
   return (
     <div>
       <h1>High Order Components</h1>
@@ -12,8 +13,18 @@ const HOC = () => {
         <li>It should always be a pure function.</li>
         <li>It should never modify the Wrapped Component.</li>
       </ul>
+      <div>
+        <h1>Click Counter</h1>
+        <h1>{props.values}</h1>
+        <div>
+          <button onClick={props.increament}>Increment!!!</button>
+        </div>
+        <div>
+          <button onClick={props.decrement}>Decrement!!!</button>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default HOC;
+export default CountHoc(HOC);

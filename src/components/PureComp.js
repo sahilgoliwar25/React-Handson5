@@ -12,18 +12,10 @@ const PureComp = () => {
         same output for the same state and props. Pure Components prevents
         compponents being re-rendered if the values of state and props has not
         changed. This components will be rendered only in 3 conditions:
-        <ol>
-          <li>
-            <pre>this.setState({})</pre>
-          </li>
-          <li>
-            <pre>Change in props</pre>
-          </li>
-          <li>
-            <pre>this.forceUpdate()</pre>
-          </li>
-        </ol>
       </p>
+      <pre>1. this.setState({})</pre>
+      <pre>2. Change in props</pre>
+      <pre>3. this.forceUpdate()</pre>
       <h3>Example:</h3>
       <ExPureComp />
       <ExPureComp />
